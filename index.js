@@ -1,3 +1,5 @@
+const prettier = require('./prettier.config');
+
 module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
@@ -53,14 +55,7 @@ module.exports = {
     // rules for https://github.com/prettier/eslint-plugin-prettier
     'prettier/prettier': [
       'error',
-      {
-        // keep this in sync with .prettier.js (or .prettierrc)
-        bracketSpacing: true,
-        printWidth: 80,
-        semi: false,
-        singleQuote: true,
-        trailingComma: 'all',
-      },
+      prettier
     ],
 
     // https://www.npmjs.com/package/eslint-plugin-react-hooks

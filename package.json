@@ -1,6 +1,6 @@
 {
   "name": "@indimeco/eslint-config-indimeco",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "eslint config for my projects",
   "author": "Indimeco",
   "license": "MIT",
