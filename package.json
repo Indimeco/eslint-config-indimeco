@@ -1,0 +1,71 @@
+{
+  "name": "@indimeco/eslint-config-indimeco",
+  "version": "1.0.0",
+  "description": "eslint config for my projects",
+  "author": "Indimeco",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "prettier",
+    "prettier-config"
+  ],
+  "bugs": {
+    "url": "https://github.com/indimeco/eslint-config-indimeco/issues"
+  },
+  "homepage": "https://github.com/indimeco/eslint-config-indimeco#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indimeco/eslint-config-indimeco"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "prettier.js",
+    "prettier.config.js"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "peerDependencies": {
+    "babel-eslint": ">=10.0.3 <11",
+    "eslint": ">=6.5.1 <7",
+    "eslint-config-airbnb": ">=18.0.1 <19",
+    "eslint-config-prettier": ">=6.4.0 <7",
+    "eslint-plugin-import": ">=2.18.2 <3",
+    "eslint-plugin-jest": ">=22.19.0 <23",
+    "eslint-plugin-jsx-a11y": ">=6.2.3 <7",
+    "eslint-plugin-prettier": ">=3.1.1 <4",
+    "eslint-plugin-react": ">=7.16.0 <8",
+    "eslint-plugin-react-hooks": ">=2.1.2 <3",
+    "prettier": ">=1.18.2 <2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "babel-eslint": "10.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "6.5.1",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "6.4.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jest": "22.19.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "husky": "^3.0.9",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "pretty-quick": "^2.0.1"
+  }
+}
