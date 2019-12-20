@@ -24,13 +24,13 @@ module.exports = {
     // general ESLint rules
     'no-case-declarations': 0,
     'no-plusplus': 0,
-    "no-confusing-arrow": ["error", { "allowParens": false }],
-    'sort-imports': 'off',
+    'sort-imports': 0,
     'sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
 
     // rules for https://github.com/benmosher/eslint-plugin-import
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/prefer-default-export': 0,
+    'import/no-named-as-default': 0,
 
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
     'jest/consistent-test-it': [
