@@ -1,6 +1,6 @@
 {
   "name": "@indimeco/eslint-config-indimeco",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "description": "eslint config for my projects",
   "author": "Indimeco",
   "license": "MIT",
@@ -36,7 +36,8 @@
     }
   },
   "peerDependencies": {
-    "babel-eslint": "*",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
     "eslint": ">=6.5.1 <7",
     "eslint-config-airbnb": ">=18.0.1 <19",
     "eslint-config-prettier": ">=6.4.0 <7",
@@ -46,26 +47,15 @@
     "eslint-plugin-prettier": ">=3.1.1 <4",
     "eslint-plugin-react": ">=7.16.0 <8",
     "eslint-plugin-react-hooks": ">=2.1.2 <3",
-    "prettier": ">=1.18.2 <2"
+    "prettier": ">=1.18.2 <2",
+    "typescript": "3.7.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "babel-eslint": "10.0.3",
     "cz-conventional-changelog": "^3.0.2",
-    "eslint": "6.5.1",
-    "eslint-config-airbnb": "18.0.1",
-    "eslint-config-prettier": "6.4.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jest": "22.19.0",
-    "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-prettier": "3.1.1",
-    "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
     "husky": "^3.0.9",
-    "prettier": "^1.18.2"
-  },
-  "dependencies": {
+    "prettier": "^1.18.2",
     "pretty-quick": "^2.0.1"
   }
 }

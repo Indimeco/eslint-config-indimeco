@@ -1,9 +1,9 @@
 const prettier = require('./prettier.config');
 
 module.exports = {
-  parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['jest', 'prettier', 'react-hooks'], // alternative: https://github.com/prettier/prettier-eslint
+  parser: "@typescript-eslint/parser",
+  plugins: ['@typescript-eslint', 'jest', 'prettier', 'react-hooks'], // alternative: https://github.com/prettier/prettier-eslint
+  extends: ['airbnb','prettier', 'prettier/react', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript'],
   env: {
     browser: true,
     es6: true,
@@ -16,8 +16,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      defaultParams: true,
-      spread: true,
+      jsx: true,
     },
   },
   rules: {
