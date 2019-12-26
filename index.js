@@ -30,6 +30,8 @@ module.exports = {
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/prefer-default-export': 0,
     'import/no-named-as-default': 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["/**/*.test.[jt]?([sx])?(x)"]}], // allow devDependency imports in test files
+
 
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
     'jest/consistent-test-it': [
