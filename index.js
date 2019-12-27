@@ -1,9 +1,9 @@
 const prettier = require('./prettier.config');
 
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'jest', 'prettier', 'react-hooks'], // alternative: https://github.com/prettier/prettier-eslint
-  extends: ['airbnb','prettier', 'prettier/react', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript'],
+  extends: ['airbnb', 'prettier', 'prettier/react', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript'],
   env: {
     browser: true,
     es6: true,
@@ -30,7 +30,7 @@ module.exports = {
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/prefer-default-export': 0,
     'import/no-named-as-default': 0,
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["/**/*.test.[jt]?([sx])?(x)"]}], // allow devDependency imports in test files
+    'import/no-extraneous-dependencies': 'error',
 
 
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
@@ -64,19 +64,20 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
 
     // rules for https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
-    'react/jsx-curly-brace-presence': [2, { props: "never", children: "never" }], // use "" when passing a strint as a property
+    'react/jsx-curly-brace-presence': [2, { props: 'never', children: 'never' }], // use '' when passing a strint as a property
     'react/jsx-filename-extension': 0, // we assume we do not use *.jsx files
     'react/sort-comp': 2,
   },
   overrides: [
     {
-      files: ['./src/**/*.test.js', './src/**/*.spec.js'],
+      files: ['**/*.@(?(spec)?(test)).[jt]?([sx])?(x)', '**/testUtils/*'],
       globals: {
         React: true,
       },
       rules: {
         'no-console': 0,
         'global-require': 0,
+        'import/no-extraneous-dependencies': ['error', { 'devDependencies': true, 'optionalDependencies': false, 'peerDependencies': false }]
       },
     },
   ],
