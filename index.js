@@ -70,7 +70,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.@(?(spec)?(test)).[jt]?([sx])?(x)', '**/testUtils/*'],
+      files: ['**/*.@(?(spec)?(test)).[jt]?([sx])?(x)', '**/testUtils/*', '**/cypress/**/*'],
       globals: {
         React: true,
       },
