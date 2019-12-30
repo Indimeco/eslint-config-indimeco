@@ -67,10 +67,17 @@ module.exports = {
     'react/jsx-curly-brace-presence': [2, { props: 'never', children: 'never' }], // use '' when passing a strint as a property
     'react/jsx-filename-extension': 0, // we assume we do not use *.jsx files
     'react/sort-comp': 2,
+
+    // typescript
+    '@typescript-eslint/explicit-function-return-type': ['warn', {
+      allowExpressions: true,
+      allowTypedFunctionExpressions: true,
+      allowHigherOrderFunctions: true
+    }]
   },
   overrides: [
     {
-      files: ['**/*.@(?(spec)?(test)).[jt]?([sx])?(x)', '**/testUtils/*', '**/cypress/**/*'],
+      files: ['**/*.@(?(spec)?(test)).[jt]?([sx])?(x)', '**/testUtils/*', '**/cypress/**/*', '**/setupTests.*'],
       globals: {
         React: true,
       },
