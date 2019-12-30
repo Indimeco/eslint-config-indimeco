@@ -83,5 +83,11 @@ module.exports = {
         'import/no-extraneous-dependencies': ['error', { 'devDependencies': true, 'optionalDependencies': false, 'peerDependencies': false }]
       },
     },
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+          "react/prop-types": "off"
+      }
+  }
   ],
 }
