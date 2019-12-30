@@ -69,11 +69,7 @@ module.exports = {
     'react/sort-comp': 2,
 
     // typescript
-    '@typescript-eslint/explicit-function-return-type': ['warn', {
-      allowExpressions: true,
-      allowTypedFunctionExpressions: true,
-      allowHigherOrderFunctions: true
-    }]
+    '@typescript-eslint/explicit-function-return-type': "off",
   },
   overrides: [
     {
