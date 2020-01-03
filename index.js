@@ -67,6 +67,9 @@ module.exports = {
     'react/jsx-curly-brace-presence': [2, { props: 'never', children: 'never' }], // use '' when passing a strint as a property
     'react/jsx-filename-extension': 0, // we assume we do not use *.jsx files
     'react/sort-comp': 2,
+    'react/jsx-props-no-spreading': [1, {
+      'explicitSpread': 'ignore'
+    }],
 
     // typescript
     '@typescript-eslint/explicit-function-return-type': "off",
