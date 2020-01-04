@@ -71,6 +71,10 @@ module.exports = {
       'explicitSpread': 'ignore'
     }],
 
+    // a11y
+    "jsx-a11y/label-has-associated-control": 0, // weak rule with the only way to fix being massive lists of exceptions
+
+
     // typescript
     '@typescript-eslint/explicit-function-return-type': "off",
   },
