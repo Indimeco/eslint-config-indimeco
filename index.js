@@ -24,7 +24,8 @@ module.exports = {
     'no-case-declarations': 0,
     'no-plusplus': 0,
     'sort-imports': 0,
-    'sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
+    'sort-keys': 0, // data structures should be in pyramid information format
+    'no-underscore-dangle': 0, // mongodb uses _props
 
     // rules for https://github.com/benmosher/eslint-plugin-import
     'import/order': ['error', { 'newlines-between': 'always' }],
