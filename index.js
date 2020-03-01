@@ -26,6 +26,7 @@ module.exports = {
     'sort-imports': 0,
     'sort-keys': 0, // data structures should be in pyramid information format
     'no-underscore-dangle': 0, // mongodb uses _props
+    'no-unused-expressions': "off", // handled by ts
 
     // rules for https://github.com/benmosher/eslint-plugin-import
     'import/order': ['error', { 'newlines-between': 'always' }],
@@ -78,6 +79,7 @@ module.exports = {
 
     // typescript
     '@typescript-eslint/explicit-function-return-type': "off",
+    '@typescript-eslint/no-unused-expressions': ["error"],
   },
   overrides: [
     {
