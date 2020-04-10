@@ -3,7 +3,16 @@ const prettier = require('./prettier.config');
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'jest', 'prettier', 'react-hooks'], // alternative: https://github.com/prettier/prettier-eslint
-  extends: ['airbnb', 'prettier', 'prettier/react', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript'],
+  extends: [
+    'airbnb',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'prettier',
+    'prettier/react',
+  ],
   env: {
     browser: true,
     es6: true,
@@ -26,14 +35,14 @@ module.exports = {
     'sort-imports': 0,
     'sort-keys': 0, // data structures should be in pyramid information format
     'no-underscore-dangle': 0, // mongodb uses _props
-    'no-unused-expressions': "off", // handled by ts
+    'no-unused-expressions': 'off', // handled by ts
+    'no-unused-vars': 'off', // handled by ts
 
     // rules for https://github.com/benmosher/eslint-plugin-import
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/prefer-default-export': 0,
     'import/no-named-as-default': 0,
     'import/no-extraneous-dependencies': 'error',
-
 
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
     'jest/consistent-test-it': [
@@ -56,10 +65,7 @@ module.exports = {
     'jest/valid-expect': 'error',
 
     // rules for https://github.com/prettier/eslint-plugin-prettier
-    'prettier/prettier': [
-      'error',
-      prettier
-    ],
+    'prettier/prettier': ['error', prettier],
 
     // https://www.npmjs.com/package/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
@@ -69,17 +75,23 @@ module.exports = {
     'react/jsx-curly-brace-presence': [2, { props: 'never', children: 'never' }], // use '' when passing a strint as a property
     'react/jsx-filename-extension': 0, // we assume we do not use *.jsx files
     'react/sort-comp': 2,
-    'react/jsx-props-no-spreading': [1, {
-      'explicitSpread': 'ignore'
-    }],
+    'react/jsx-props-no-spreading': 0,
 
     // a11y
-    "jsx-a11y/label-has-associated-control": 0, // weak rule with the only way to fix being massive lists of exceptions
-
+    'jsx-a11y/label-has-associated-control': 0, // weak rule with the only way to fix being massive lists of exceptions
 
     // typescript
-    '@typescript-eslint/explicit-function-return-type': "off",
-    '@typescript-eslint/no-unused-expressions': ["error"],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-unused-expressions': ['error'],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+      },
+    ],
   },
   overrides: [
     {
@@ -90,14 +102,18 @@ module.exports = {
       rules: {
         'no-console': 0,
         'global-require': 0,
-        'import/no-extraneous-dependencies': ['error', { 'devDependencies': true, 'optionalDependencies': false, 'peerDependencies': false }]
+        'import/no-extraneous-dependencies': [
+          'error',
+          { devDependencies: true, optionalDependencies: false, peerDependencies: false },
+        ],
       },
     },
     {
-      "files": ["**/*.ts?(x)"],
-      "rules": {
-          "react/prop-types": "off"
-      }
-  }
+      files: ['**/*.ts?(x)'],
+      rules: {
+        'react/prop-types': 'off',
+        '@typescript-eslint/no-var-requires': 2,
+      },
+    },
   ],
-}
+};
