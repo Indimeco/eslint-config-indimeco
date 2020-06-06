@@ -52,7 +52,16 @@ module.exports = {
         withinDescribe: 'it',
       },
     ],
-    'jest/expect-expect': 'error',
+    'jest/expect-expect': [
+      'error',
+      {
+        assertFunctionNames: [
+          'expect',
+          'should', // cypress and chai
+          'cy.*.should', // cypress
+        ],
+      },
+    ],
     'jest/no-disabled-tests': 'warn',
     'jest/no-focused-tests': 'warn',
     'jest/no-identical-title': 'error',
