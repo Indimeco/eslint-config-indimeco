@@ -38,6 +38,7 @@ module.exports = {
     'no-underscore-dangle': 0, // mongodb uses _props
     'no-unused-expressions': 'off', // handled by ts
     'no-unused-vars': 'off', // handled by ts
+    'no-use-before-define': 'off', // handled by ts
 
     // rules for https://github.com/benmosher/eslint-plugin-import
     'import/order': ['error', { 'newlines-between': 'always' }],
@@ -112,6 +113,7 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
+    '@typescript-eslint/no-use-before-define': ['error'],
   },
   overrides: [
     {

@@ -1,4 +1,4 @@
-const myConfig = require('./index.js');
+const myConfig = require('./index');
 
 module.exports = {
   ...myConfig,
